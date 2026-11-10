@@ -1,0 +1,28 @@
+[package]
+name = "tanggap_lampung"
+version = "1.0.0"
+edition = "2021"
+authors = ["Bintang Mahardinanta Sukmaji", "Dr. Erliyan Redy Susanto, M.Kom"]
+description = "Sistem Peringatan Dini dan Informasi Darurat Bencana Kota Bandar Lampung"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros", "multipart"] }
+tokio = { version = "1.0", features = ["full"] }
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "postgres", "chrono", "uuid", "json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+dotenvy = "0.15"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+askama = { version = "0.12", features = ["with-axum"] }
+askama_axum = "0.4"
+tower-http = { version = "0.5", features = ["fs", "trace", "cors"] }
+argon2 = "0.5"
+aes-gcm = "0.10"
+hmac = "0.12"
+sha2 = "0.10"
+totp-rs = "5.4"
+reqwest = { version = "0.11", features = ["json"] }
+csv = "1.3"
